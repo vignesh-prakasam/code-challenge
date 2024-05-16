@@ -1,0 +1,23 @@
+/* app/assets/stylesheets/dogs.css */
+
+body {
+    background-color: lightgrey;
+    display: flex;
+  }
+
+  #dog_form {
+    margin-top: 200px;
+    margin-left: 200px;
+  }
+  
+  #dog_form, #dog_image {
+    flex: 1;
+    /* padding: 20px; */
+  }
+
+  .breed-name {
+    font-size: 2em;
+    font-weight: bold;
+    color: green;
+    text-align: center;
+  }

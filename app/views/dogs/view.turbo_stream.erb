@@ -2,9 +2,10 @@
   <template>
     <turbo-frame id="dog_image">
       <% if @dog_image %>
+        <h4 class="breed-name"><%= @breed %></h4>
         <%= image_tag @dog_image %>
       <% else %>    
-        <span>No dogs found</span>
+        <span>No dog images found for <%= @breed %></span>
       <% end %>    
     </turbo-frame>
   </template>
