@@ -1,0 +1,10 @@
+
+<turbo-frame id="dog_form">
+<%= form_tag "/dogs/view", method: :post do %>
+  <%= text_field_tag :breed, nil, class: "border-2 border-gray-300 p-2 rounded-lg" %>
+<%= submit_tag "Submit", class: "bg-blue-500 text-white p-2 rounded-lg" %>
+<% end %>
+</turbo-frame>
+
+<turbo-frame id="dog_image"></turbo-frame>
+

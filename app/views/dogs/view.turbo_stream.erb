@@ -1,0 +1,11 @@
+<turbo-stream action="replace" target="dog_image">
+  <template>
+    <turbo-frame id="dog_image">
+      <% if @dog_image %>
+        <%= image_tag @dog_image %>
+      <% else %>    
+        <span>No dogs found</span>
+      <% end %>    
+    </turbo-frame>
+  </template>
+</turbo-stream>
