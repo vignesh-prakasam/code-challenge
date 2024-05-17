@@ -1,7 +1,7 @@
 /* app/assets/stylesheets/dogs.css */
 
 body {
-    background-color: lightgrey;
+    background-color: lightgrey !important;
     display: flex;
   }
 
@@ -20,4 +20,31 @@ body {
     font-weight: bold;
     color: green;
     text-align: center;
+  }
+
+  .navbar-brand {
+    font-size: 1.6rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .fixed-ratio {
+    object-fit: cover;
+    width: 300%;
+    height: 400px;
+  }
+
+  .field-ratio {
+    background-color: GhostWhite;
+    border-bottom: 1px solid;
+    border-color: white;
+  }
+
+  .not-found {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150%;
   }

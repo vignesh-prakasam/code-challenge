@@ -3,9 +3,11 @@
     <turbo-frame id="dog_image">
       <% if @dog_image %>
         <h4 class="breed-name"><%= @breed %></h4>
-        <%= image_tag @dog_image %>
+        <%= image_tag(@dog_image, class: "fixed-ratio") %>
       <% else %>    
-        <span>No dog images found for <%= @breed %></span>
+        <div class="not-found">
+          <span>No dog images found for <%= @breed %>.</span>
+        </div>
       <% end %>    
     </turbo-frame>
   </template>

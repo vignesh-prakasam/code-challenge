@@ -1,0 +1,70 @@
+/* Autocomplete container */
+.autocomplete {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Input field */
+  .autocomplete input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 13px;
+    border: 1px solid black;
+    border-radius: 4px;
+  }
+  
+  /* Autocomplete dropdown */
+  .autocomplete-items {
+    position: absolute;
+    border: 1px solid #d4d4d4;
+    border-bottom: none;
+    border-top: none;
+    z-index: 99;
+    top: 100%;
+    left: 0;
+    right: 0;
+  }
+  
+  /* Autocomplete item */
+  .autocomplete-items div {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    border-bottom: 1px solid #d4d4d4;
+  }
+  
+  /* Hover state for autocomplete item */
+  .autocomplete-items div:hover {
+    background-color: #e9e9e9;
+  }
+  
+  /* Active item in autocomplete dropdown */
+  .autocomplete-active {
+    background-color: DodgerBlue !important;
+    color: #ffffff;
+  }
+  
+  /* Styling for autocomplete dropdown results */
+
+  
+  /* Styling for autocomplete dropdown result items */
+  .autocomplete .autocomplete-results ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-height: 200px; /* Adjust max height as needed */
+    overflow-y: auto;
+  }
+  
+  /* Styling for autocomplete dropdown result item */
+  .autocomplete .autocomplete-results li {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  /* Hover state for autocomplete dropdown result items */
+  .autocomplete .autocomplete-results li:hover,
+  .autocomplete .autocomplete-results li.active {
+    background-color: #f4f4f4;
+  }

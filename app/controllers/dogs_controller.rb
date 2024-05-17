@@ -1,4 +1,9 @@
 class DogsController < ApplicationController
+  def index
+    dog_service = DogService.new
+    @dog_breeds_name = dog_service.get_dog_breeds_name
+  end
+
   def view
     @breed = params[:breed]
     dog_service = DogService.new(@breed)
