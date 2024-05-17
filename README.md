@@ -1,24 +1,11 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is the Jokepit code challenge project. When you enter a dog breed, a picture of the dog is shown. This project uses Rails 7 with Tailwind.css. Hotwire has been used to achieve the display of the picture without a page load. Additionally, an autocomplete plugin has been used to fill in the dog breed name. 
 
-Things you may want to cover:
+The code is hosted at [https://code-challenge-1.onrender.com](https://code-challenge-1.onrender.com).
 
-* Ruby version
+## Steps to run in localhost:
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+1. Run `bundle install` to install the necessary Ruby gems.
+2. Run `yarn install` to install the necessary JavaScript packages.
+3. Run `./bin/dev` to start the development server.
