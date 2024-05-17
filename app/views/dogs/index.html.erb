@@ -1,5 +1,5 @@
-<div class="flex flex-col sm:flex-row mt-32 pl-2">
-    <turbo-frame id="dog_form" class="w-full sm:w-1/2">
+<div class="flex flex-col sm:flex-row items-start justify-center sm:justify-start mt-32 pl-2">
+    <turbo-frame id="dog_form" class="w-full sm:w-1/2 mb-8 sm:mb-0">
         <%= form_tag "/dogs/view", method: :post, remote: true do %>
             <div class="border-2 border-white-300 p-4 rounded-lg shadow-lg field-ratio bg-light">
                 <%= label_tag :breed, "Breed", class: "block text-lg font-bold mb-2" %>
@@ -11,7 +11,7 @@
         <% end %>
     </turbo-frame>
 
-    <turbo-frame id="dog_image" class="w-full mb-16"></turbo-frame>
+    <turbo-frame id="dog_image" class="w-full sm:w-1/2 sm:h-auto"></turbo-frame>
 </div>
 
 <script type="text/javascript">
