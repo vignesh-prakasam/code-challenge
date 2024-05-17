@@ -4,11 +4,11 @@ body {
     background-color: lightgrey !important;
     display: flex;
   }
-
+/* 
   #dog_form {
     margin-top: 200px;
     margin-left: 200px;
-  }
+  } */
   
   #dog_form, #dog_image {
     flex: 1;
@@ -20,20 +20,6 @@ body {
     font-weight: bold;
     color: green;
     text-align: center;
-  }
-
-  .navbar-brand {
-    font-size: 1.6rem;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-  }
-
-  .fixed-ratio {
-    object-fit: cover;
-    width: 300%;
-    height: 400px;
   }
 
   .field-ratio {

@@ -1,9 +1,9 @@
 <turbo-stream action="replace" target="dog_image">
   <template>
-    <turbo-frame id="dog_image">
+    <turbo-frame id="dog_image" class="w-full sm:w-1/2">
       <% if @dog_image %>
         <h4 class="breed-name"><%= @breed %></h4>
-        <%= image_tag(@dog_image, class: "fixed-ratio") %>
+        <%= image_tag(@dog_image, class: "max-w-full h-auto ml-auto") %>
       <% else %>    
         <div class="not-found">
           <span>No dog images found for <%= @breed %>.</span>

@@ -1,45 +1,17 @@
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-</head>
-
-<turbo-frame id="dog_form">
-<%= form_tag "/dogs/view", method: :post, remote: true do %>
-    <%= label_tag :breed, "Breed", class: "block text-lg font-bold" %>
-    <%= text_field_tag :breed, nil, placeholder: "Enter dog breed", required: true,  class: "border-2 border-gray-300 p-2 rounded-lg" %>
-    <%= submit_tag "Submit", class: "bg-blue-500 text-white p-2 rounded-lg" %>
-<% end %>
-</turbo-frame>
-
-<nav class="navbar navbar-dark bg-dark border-bottom border-body fixed-top text-center">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">Code Challenge - Vigneshp</a>
-    </div>
-</nav>
-
-<div class="container mt-5 pt-5">
-    <turbo-frame id="dog_form">
+<div class="flex flex-col sm:flex-row mt-32 pl-2">
+    <turbo-frame id="dog_form" class="w-full sm:w-1/2">
         <%= form_tag "/dogs/view", method: :post, remote: true do %>
-            <div class="row">
-                <div class="col-md-10">
-                    <div class="border-2 border-white-300 p-4 rounded-lg shadow-lg field-ratio bg-light">
-                        <%= label_tag :breed, "Breed", class: "block text-lg font-bold mb-2" %>
-                        <div class="autocomplete" style="display: flex;">
-                            <%= text_field_tag :breed, nil, placeholder: "Enter dog breed", class: "form-control p-2 rounded-lg", id: "dog_breed_field", style: "margin-right: 10px;" %>
-                            <%= submit_tag "Submit", class: "btn btn-sm btn-primary bg-blue-500 text-white p-2 rounded-lg" %>
-                        </div>
-                    </div>
+            <div class="border-2 border-white-300 p-4 rounded-lg shadow-lg field-ratio bg-light">
+                <%= label_tag :breed, "Breed", class: "block text-lg font-bold mb-2" %>
+                <div class="autocomplete" style="display: flex;">
+                    <%= text_field_tag :breed, nil, placeholder: "Enter dog breed", required: true, class: "form-control p-2 rounded-lg mr-2", id: "dog_breed_field" %>
+                    <%= submit_tag "Submit", class: "btn btn-sm btn-primary bg-blue-500 text-white p-2 rounded-lg" %>
                 </div>
             </div>
         <% end %>
     </turbo-frame>
-</div>
 
-<div class="col-md-6">
-    <turbo-frame id="dog_image"></turbo-frame>
+    <turbo-frame id="dog_image" class="w-full mb-16"></turbo-frame>
 </div>
 
 <script type="text/javascript">

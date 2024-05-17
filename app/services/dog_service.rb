@@ -1,6 +1,6 @@
 class DogService
   API_URL = "https://dog.ceo/api/breed/%{breed}/images/random"
-
+  BREEDS_URL = 'https://dog.ceo/api/breeds/list/all'
   def initialize(breed = nil)
     @api_url = API_URL % {breed: breed}
   end
@@ -20,8 +20,7 @@ class DogService
 
   def get_dog_breeds_name
     begin
-      breeds_list_url = 'https://dog.ceo/api/breeds/list/all'
-      response = RestClient.get(breeds_list_url)
+      response = RestClient.get(BREEDS_URL)
       return nil unless response.code == 200
 
       body = JSON.parse(response.body)
