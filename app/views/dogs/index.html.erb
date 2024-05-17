@@ -6,6 +6,13 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 </head>
 
+<turbo-frame id="dog_form">
+<%= form_tag "/dogs/view", method: :post, remote: true do %>
+    <%= label_tag :breed, "Breed", class: "block text-lg font-bold" %>
+    <%= text_field_tag :breed, nil, placeholder: "Enter dog breed", required: true,  class: "border-2 border-gray-300 p-2 rounded-lg" %>
+    <%= submit_tag "Submit", class: "bg-blue-500 text-white p-2 rounded-lg" %>
+<% end %>
+</turbo-frame>
 
 <nav class="navbar navbar-dark bg-dark border-bottom border-body fixed-top text-center">
     <div class="container-fluid">
