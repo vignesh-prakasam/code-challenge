@@ -1,6 +1,6 @@
 
 <turbo-frame id="dog_form">
-<%= form_tag "/dogs/view", method: :post do %>
+<%= form_tag "/dogs/view", method: :post, remote: true do %>
     <%= label_tag :breed, "Breed", class: "block text-lg font-bold" %>
     <%= text_field_tag :breed, nil, placeholder: "Enter dog breed",  class: "border-2 border-gray-300 p-2 rounded-lg" %>
     <%= submit_tag "Submit", class: "bg-blue-500 text-white p-2 rounded-lg" %>
