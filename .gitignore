@@ -39,3 +39,5 @@
 vendor
 tmp
 log
+
+/config/credentials/production.key
